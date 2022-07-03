@@ -1,12 +1,17 @@
-import { render } from "react-dom";
-import Header from './Header'
+import { createRoot } from 'react-dom/client'
+import Header from "./components/Header";
+const container = document.getElementById('root');
+const root = createRoot(container);
+import Header from "./components/Header";
+import Meme from "./components/Meme";
 
-const App = () => {
-  return (
-    <div>
+const App = () =>{
+  return(
+    <>
       <Header />
-    </div>
-  );
-};
+      <Meme />
+    </>
+  )
+}
 
-render(<App />, document.getElementById("root"));
+root.render(<App />)
